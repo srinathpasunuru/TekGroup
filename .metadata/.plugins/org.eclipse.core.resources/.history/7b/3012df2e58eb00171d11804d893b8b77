@@ -1,0 +1,17 @@
+package com.srinath.MethodOverride;
+
+import com.srinath.MethodOverriden;
+
+public class MethodOverriding extends MethodOverriden {   //child class extending the parent class
+	
+	public void method() {
+		
+			System.out.println("overriding method");  //this is the overriding method
+	}
+	public static void main(String[] args) {
+		
+		new MethodOverriding().method();
+
+	}
+
+}
