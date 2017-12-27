@@ -1,0 +1,11 @@
+package com.srinath;
+
+public class MethodOverriding extends MethodOverridden {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

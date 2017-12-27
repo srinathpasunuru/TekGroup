@@ -1,0 +1,28 @@
+package com.srinath;
+
+public class MethodOverloading {
+	
+	private void method1(int a) {
+		
+		System.out.println("method m1 with one argument and data type of int");
+	}
+	
+	private void method1(int a, int b) {
+		
+		System.out.println("method m2 with two argument and data types of int");
+	}
+	
+	private void method1(char ch) {
+		
+		System.out.println("method m3 with two argument and data types of char");
+	}
+
+	public static void main(String[] args) {
+		
+		MethodOverloading obj = new MethodOverloading();
+		obj.method1(10);
+		obj.method1(10,20);
+		obj.method1('c');
+	}
+
+}

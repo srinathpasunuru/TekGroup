@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.srinath.ConstructorOveloading&apos; to &apos;ConstructorOverloading&apos;&#x0D;&#x0A;- Original project: &apos;TekGroup_practice&apos;&#x0D;&#x0A;- Original element: &apos;com.srinath.ConstructorOveloading&apos;&#x0D;&#x0A;- Renamed element: &apos;com.srinath.ConstructorOverloading&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ConstructorOveloading&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.srinath{ConstructorOveloading.java[ConstructorOveloading" matchStrategy="1" name="ConstructorOverloading" qualified="false" references="true" similarDeclarations="false" stamp="1514396065634" textual="false" version="1.0"/>
+</session>

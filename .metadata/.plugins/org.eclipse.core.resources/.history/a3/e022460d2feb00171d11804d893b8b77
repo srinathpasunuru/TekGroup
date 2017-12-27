@@ -1,0 +1,10 @@
+package com.srinath;
+
+public class MethodOverriden {
+
+	public void method() {
+		
+		System.out.println("overridden method");
+		
+	}
+}

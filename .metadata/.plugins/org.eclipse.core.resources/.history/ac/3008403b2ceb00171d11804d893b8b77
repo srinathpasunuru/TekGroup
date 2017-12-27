@@ -1,0 +1,19 @@
+package com.srinath;
+
+public class ConstructorOverloading {
+	
+	ConstructorOverloading(int a){
+		
+		System.out.println("1-arg constructor");
+	}
+	
+	ConstructorOverloading(int a, int b){
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
