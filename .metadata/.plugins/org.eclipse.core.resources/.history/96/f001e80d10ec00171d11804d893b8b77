@@ -1,0 +1,19 @@
+package com.srinath.arraylist;
+
+import java.io.IOException;
+import java.lang.*;
+
+public class ArrayLst {
+
+	public static void main(String[] args) throws IOException {
+		
+	    //size of the arraylist
+		int n = 5;
+		
+		//creating an arraylist with size n
+		ArrayLst list = new ArrayLst(n);
+		
+
+	}
+
+}

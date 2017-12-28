@@ -1,0 +1,19 @@
+package com.srinath.arraylist;
+
+import java.lang.*;
+import java.util.*;
+
+public class ArrayList {
+
+	public static void main(String[] args) {
+		
+	    //size of the arraylist
+		int n = 5;
+		
+		//creating an arraylist with size n
+		ArrayList<Integer> list = new ArrayList<Integer>(n);
+		
+
+	}
+
+}
