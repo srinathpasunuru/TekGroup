@@ -1,0 +1,5 @@
+package com.srinath.Interfaces;
+
+public interface Test {
+
+}

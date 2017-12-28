@@ -1,0 +1,23 @@
+package com.srinath.Interfaces;
+
+public class Pilot1 implements AirPlane {
+
+	@Override
+	public void changeSpeed(int a) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void changeFlaps(int b) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void applyBrakes(int c) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

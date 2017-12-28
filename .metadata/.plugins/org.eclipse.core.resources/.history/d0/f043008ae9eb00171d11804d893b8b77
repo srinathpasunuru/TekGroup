@@ -1,0 +1,23 @@
+package com.srinath.Interfaces;
+
+public class Pilot1 implements AirPlane {
+
+	int speed;
+	int flaps;
+	
+	@Override
+	public void increaseSpeed(int a) {
+		
+	}
+
+	@Override
+	public void changeFlaps(int b) {
+	
+	}
+
+	@Override
+	public void applyBrakes(int c) {
+
+	}
+
+}
