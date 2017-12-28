@@ -1,0 +1,5 @@
+package com.srinath.Inheritence;
+
+public class Boeing extends Airplane {
+
+}

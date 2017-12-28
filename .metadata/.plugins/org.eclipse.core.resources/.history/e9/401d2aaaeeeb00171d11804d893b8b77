@@ -1,0 +1,17 @@
+package com.srinath.Inheritence;
+
+public class Airplane {
+	
+	int speed;
+	int flaps;
+	
+	public void increaseSpeed(int speed) {
+		
+		this.speed += speed;
+	}
+	
+	public void changeFlaps(int flaps) {
+		
+		this.flaps = flaps;
+	}
+}
