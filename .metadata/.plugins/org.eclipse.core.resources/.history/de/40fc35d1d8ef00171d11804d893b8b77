@@ -1,0 +1,10 @@
+package com.srinath.Map;
+
+public class Map_iterator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
