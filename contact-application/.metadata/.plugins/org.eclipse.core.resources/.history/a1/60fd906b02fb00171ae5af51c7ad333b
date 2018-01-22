@@ -1,0 +1,72 @@
+package com.srinath.ContactApp.Dao;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
+
+import com.srinath.ContactApp.Domain.Contact;
+
+public class ContactDaoImplementation extends BaseDao implements ContactDao {
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void save(Contact c) {
+		
+		String sql = "Insert into Contact(userId, name, phone, email, address, remark)"
+				+ "Values(:userId, :name, :phone, :email, :address, :remark)";
+		Map map = new HashMap();
+		map.put("userId", c.getUserId());
+		map.put("name", c.getName());
+		map.put("phone", c.getPhone());
+		map.put("email", c.getEmail());
+		map.put("address", c.getAddress());
+		map.put("remark", c.getRemark());
+		
+		KeyHolder kh = new GeneratedKeyHolder();
+		SqlParameterSource ps = new MapSqlParameterSource(map);
+		getNamedParameterJdbcTemplate().update(sql, ps, kh);
+		c.setContactId(kh.getKey().intValue());
+	}
+
+	@Override
+	public void update(Contact c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Contact c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Integer contactId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void fingById(Integer contactId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Contact> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Contact> findByProperty(String propName, Object propValue) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

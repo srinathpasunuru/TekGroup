@@ -1,0 +1,23 @@
+package com.srinath.ContactApp.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class UserController {
+
+	@RequestMapping(value = {"/", "/index"})  //url mapping
+	public String index() {
+		return "index"; //return a jsp page in /web-inf/view/
+	}
+	
+	@RequestMapping(value = {"/user/Dashboard"})  //url mapping
+	public String userDashboard() {
+		return "User_dashboard"; //return a jsp page in /web-inf/view/
+	}
+	
+	@RequestMapping(value = {"/admin/Dashboard"})  //url mapping
+	public String adminDashboard() {
+		return "Admin_dashboard"; //return a jsp page in /web-inf/view/
+	}
+}

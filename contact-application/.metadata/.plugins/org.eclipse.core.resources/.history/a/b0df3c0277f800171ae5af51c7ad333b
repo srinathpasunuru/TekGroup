@@ -1,0 +1,11 @@
+package com.srinath.ContactApp.Config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = {"com.srinath"})
+public class SpringRootConfiguration {
+
+	//here we write the DAO, Services, data source, email sender, or some other business layer beans.
+}

@@ -1,0 +1,29 @@
+package com.srinath.ContactApp.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.srinath.ContactApp.Domain.Contact;
+import com.srinath.ContactApp.Service.ContactService;
+
+
+@Controller
+public class ContactController {
+	
+	@Autowired
+	private ContactService contactService;
+	@RequestMapping("/user/contact_form")
+	public String ContactForm(Model theModel) {
+		Contact contact = new Contact();
+		theModel.addAttribute("command", contact);
+		return "contact_form";
+	}
+	
+	@RequestMapping(value = "user/save_contact")
+	public String savingContact(@ModelAttribute Contact c, Model theModel) {
+		c.
+		return "contact_form";
+	}
+}

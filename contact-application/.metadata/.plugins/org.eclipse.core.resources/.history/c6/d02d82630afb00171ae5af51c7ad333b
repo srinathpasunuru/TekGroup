@@ -1,0 +1,17 @@
+package com.srinath.ContactApp.Service;
+
+import com.srinath.ContactApp.Domain.User;
+
+public interface UserService {
+	
+	public static final Integer Login_Status_Actice = 1;
+	public static final Integer Login_Status_Blocked = 2;
+	
+	//this method helps in the registration of the user
+	public void UserRegister(User u);
+	
+	public User login(String loginName, String password) throws UserBlockedException;
+	
+	
+
+}

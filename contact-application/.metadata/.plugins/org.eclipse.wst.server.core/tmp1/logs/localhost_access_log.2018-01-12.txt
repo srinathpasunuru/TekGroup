@@ -1,0 +1,8 @@
+127.0.0.1 - - [12/Jan/2018:14:50:56 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Jan/2018:14:50:56 -0500] "GET /SpringContactAppication/ HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [12/Jan/2018:14:51:38 -0500] "GET /SpringContactAppication/helloworld HTTP/1.1" 404 1132
+0:0:0:0:0:0:0:1 - - [12/Jan/2018:15:02:15 -0500] "GET /SpringContactAppication/ HTTP/1.1" 404 1047
+127.0.0.1 - - [12/Jan/2018:15:06:47 -0500] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [12/Jan/2018:15:09:26 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Jan/2018:15:09:26 -0500] "GET /SpringContactAppication/ HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [12/Jan/2018:15:09:38 -0500] "GET /SpringContactAppication/helloworld HTTP/1.1" 200 281

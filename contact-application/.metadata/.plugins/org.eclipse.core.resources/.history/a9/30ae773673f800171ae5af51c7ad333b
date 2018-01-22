@@ -1,0 +1,5 @@
+package com.srinath.ContactApp.Domain;
+
+public class Contact {
+
+}

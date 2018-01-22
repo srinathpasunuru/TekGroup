@@ -1,0 +1,31 @@
+package com.srinath.ContactApp.Service;
+
+import java.util.List;
+
+import com.srinath.ContactApp.Domain.User;
+import com.srinath.ContactApp.Exception.UserBlockedException;
+
+public interface UserService {
+	
+	public static final Integer Login_Status_Actice = 1;
+	public static final Integer Login_Status_Blocked = 2;
+	
+	public static final Integer role_admin = 1;
+	public static final Integer role_user = 2;
+		
+	//this method helps in the registration of the user
+	public void UserRegister(User u);
+	
+	//handles the authentication using the given credentials
+	//returns the user object when success and null when failed
+	//throws the exception when the user is blocked
+	public User login(String loginName, String password) throws UserBlockedException;
+	
+	//this method is called to get the list of users registered
+	public List<User> getUserList();
+	
+	//this method changes the user login status based on the argument passed.
+	public void changeLoginStatus(Integer userId, Integer loginStatus);
+	
+
+}

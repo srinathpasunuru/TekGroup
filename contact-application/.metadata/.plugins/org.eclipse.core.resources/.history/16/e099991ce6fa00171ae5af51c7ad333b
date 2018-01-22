@@ -1,0 +1,5 @@
+package com.srinath.ContactApp.rm;
+
+public class UserRowMapper {
+
+}

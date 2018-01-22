@@ -1,0 +1,27 @@
+package com.srinath.ContactApp.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.srinath.ContactApp.command.LoginCommand;
+
+@Controller
+public class UserController {
+
+	@RequestMapping(value = {"/", "/index"})  //url mapping
+	public String index(Model theModel) {
+		theModel.addAttribute("command", new LoginCommand());
+		return "index"; //return a jsp page in /web-inf/view/
+	}
+	
+	@RequestMapping(value = {"/user/Dashboard"})  //url mapping
+	public String userDashboard() {
+		return "User_dashboard"; //return a jsp page in /web-inf/view/
+	}
+	
+	@RequestMapping(value = {"/admin/Dashboard"})  //url mapping
+	public String adminDashboard() {
+		return "Admin_dashboard"; //return a jsp page in /web-inf/view/
+	}
+}

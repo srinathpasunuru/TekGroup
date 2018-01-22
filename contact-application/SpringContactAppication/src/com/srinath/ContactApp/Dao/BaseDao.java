@@ -1,0 +1,17 @@
+package com.srinath.ContactApp.Dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
+
+//do not use @Repository or @service or @component, because BaseDao works outside th IOC container
+abstract public class BaseDao extends NamedParameterJdbcDaoSupport {
+	
+	@Autowired
+	public void setDataSource2(DataSource ds) {
+		
+		super.setDataSource(ds);
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.srinath.ContactApp.Config;
+
+public class SpringRootConfiguration {
+
+}

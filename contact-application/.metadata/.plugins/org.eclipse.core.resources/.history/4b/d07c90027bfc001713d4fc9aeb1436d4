@@ -1,0 +1,67 @@
+package com.srinath.ContactApp.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.srinath.ContactApp.Domain.User;
+import com.srinath.ContactApp.Exception.UserBlockedException;
+import com.srinath.ContactApp.Service.UserService;
+import com.srinath.ContactApp.command.LoginCommand;
+
+@Controller
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+	
+	@RequestMapping(value = {"/", "/index"})  //url mapping
+	public String index(Model theModel) {
+		theModel.addAttribute("command", new LoginCommand());
+		return "index"; //return a jsp page in /web-inf/view/
+	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String LoginHandling(@ModelAttribute("command") LoginCommand cmd, Model theModel) {
+		
+		try {
+			
+			User loggedInUser = userService.login(cmd.getLoginName(), cmd.getPassword());
+			if(loggedInUser == null) {
+				
+				theModel.addAttribute("err","Login Failed! Enter the valid credentials.");
+				return "index"; //this is the login form
+			}
+			else{
+				
+				if(loggedInUser.getRole().equals(UserService.role_user)) {
+					return "redirect:user/Dashboard";
+				}
+				else if(loggedInUser.getRole().equals(UserService.role_admin)) {
+					return "redirect:admin/Dashboard";
+				}
+				else {
+					theModel.addAttribute("err", "Invalid User Role");
+					return "index"; //this is the login form
+				}
+			}
+		} catch (UserBlockedException e) {
+			//add the error message and then go back to the login form
+			theModel.addAttribute("err", e.getMessage());
+			return "index"; //this is the login form
+		}
+	}
+	
+	@RequestMapping(value = {"/user/Dashboard"})  //url mapping
+	public String userDashboard() {
+		return "User_dashboard"; //return a jsp page in /web-inf/view/
+	}
+	
+	@RequestMapping(value = {"/admin/Dashboard"})  //url mapping
+	public String adminDashboard() {
+		return "Admin_dashboard"; //return a jsp page in /web-inf/view/
+	}
+}

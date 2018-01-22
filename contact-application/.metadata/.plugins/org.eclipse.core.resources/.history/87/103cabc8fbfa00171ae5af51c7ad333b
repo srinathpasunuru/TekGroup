@@ -1,0 +1,29 @@
+package com.srinath.ContactApp.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.srinath.ContactApp.Config.SpringRootConfiguration;
+import com.srinath.ContactApp.Dao.UserDao;
+import com.srinath.ContactApp.Domain.User;
+
+public class TestUserDaoFindById {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(SpringRootConfiguration.class);
+		UserDao userDao = context.getBean(UserDao.class);
+		User u = userDao.fingById(1);
+		System.out.println("------------User Detail----------------");
+		System.out.println(u.getUserId());
+		System.out.println(u.getName());
+		System.out.println(u.getPhone());
+		System.out.println(u.getEmail());
+		System.out.println(u.getAddress());
+		System.out.println(u.getLoginName());
+		System.out.println(u.getLoginStatus());
+		System.out.println(u.getRole());
+
+	}
+
+}

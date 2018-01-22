@@ -1,0 +1,63 @@
+package com.srinath.ContactApp.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.srinath.ContactApp.Dao.BaseDao;
+import com.srinath.ContactApp.Dao.ContactDao;
+import com.srinath.ContactApp.Domain.Contact;
+import com.srinath.ContactApp.rm.ContactRowMapper;
+import com.srinath.ContactApp.utility.StringUtil;
+
+@Service
+public class ContactServiceImplementation extends BaseDao implements ContactService {
+
+	@Autowired
+	private ContactDao contactDao;
+	@Override
+	public void save(Contact c) {
+		contactDao.save(c);
+	}
+
+	@Override
+	public void update(Contact c) {
+		contactDao.update(c);
+	}
+
+	@Override
+	public void delete(Integer contactId) {
+		contactDao.delete(contactId);
+	}
+
+	@Override
+	public void delete(Integer[] contactIds) {
+		
+		String ids = StringUtil.toCommaSeperatedArray(contactIds);
+		String sql = "Delete from contact where contactId IN("+ids+")";
+		getJdbcTemplate().update(sql);
+		
+	}
+
+	@Override
+	public List<Contact> findUserContact(Integer userId) {
+		
+		return contactDao.findByProperty("userId", userId);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Contact> findUserContact(Integer userId, String txt) {
+		
+		String sql = "select contactId, userId, name, phone, email, address, remark From Contact where userId=? AND (name LIKE '%"+txt+"%' OR phone LIKE '%"+txt+"%' OR address LIKE '%"+txt+"%' OR email LIKE '%"+txt+"%' OR remark LIKE '%"+txt+"%')";
+		return getJdbcTemplate().query(sql, new ContactRowMapper(), userId);
+	}
+
+	@Override
+	public Contact  findById(Integer contactId) {
+		
+		
+	}
+
+}

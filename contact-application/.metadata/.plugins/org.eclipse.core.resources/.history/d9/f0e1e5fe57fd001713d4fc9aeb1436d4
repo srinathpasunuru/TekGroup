@@ -1,0 +1,89 @@
+package com.srinath.ContactApp.Dao;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
+
+import com.srinath.ContactApp.Domain.Contact;
+import com.srinath.ContactApp.rm.ContactRowMapper;
+
+@Repository 
+public class ContactDaoImplementation extends BaseDao implements ContactDao {
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void save(Contact c) {
+		
+		String sql = "Insert into Contact(userId, name, phone, email, address, remark)"
+				+ "Values(:userId, :name, :phone, :email, :address, :remark)";
+		Map map = new HashMap();
+		map.put("userId", c.getUserId());
+		map.put("name", c.getName());
+		map.put("phone", c.getPhone());
+		map.put("email", c.getEmail());
+		map.put("address", c.getAddress());
+		map.put("remark", c.getRemark());
+		
+		KeyHolder kh = new GeneratedKeyHolder();
+		SqlParameterSource ps = new MapSqlParameterSource(map);
+		getNamedParameterJdbcTemplate().update(sql, ps, kh);
+		c.setContactId(kh.getKey().intValue());
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void update(Contact c) {
+		
+		String sql = "Update Contact set userId=:userId, name=:name, phone=:phone, email=:email, address=:address, remark=:remark where contactid=:contactId";
+		Map map = new HashMap();
+		map.put("contactId", c.getContactId());
+		map.put("name", c.getName());
+		map.put("phone", c.getPhone());
+		map.put("email", c.getEmail());
+		map.put("address", c.getAddress());
+		map.put("remark", c.getRemark());
+		getJdbcTemplate().update(sql, map);
+	}
+
+	@Override
+	public void delete(Contact c) {
+		this.delete(c.getContactId());
+	}
+
+	@Override
+	public void delete(Integer contactId) {
+		
+		String sql = "Delete from Contact where contactId=?";
+		getJdbcTemplate().update(sql, contactId);
+		
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public Contact findById(Integer contactId) {
+		
+		String sql = "select contactId, userId, name, phone, email, address, remark From Contact where contactid=?";
+		return (Contact) getJdbcTemplate().queryForObject(sql, new ContactRowMapper(), contactId);		
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Contact> findAll() {
+		String sql = "select contactId, userId, name, phone, email, address, remark From Contact where contactid=?";
+		return getJdbcTemplate().query(sql, new ContactRowMapper());
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Contact> findByProperty(String propName, Object propValue) {
+		String sql = "select contactId, userId, name, phone, email, address, remark From Contact where"+ propName+"=?";
+		return getJdbcTemplate().query(sql, new ContactRowMapper(), propValue);
+	}
+	
+}

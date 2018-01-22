@@ -1,0 +1,29 @@
+package com.srinath.ContactApp.rm;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.srinath.ContactApp.Domain.User;
+
+public class ContactRowMapper implements RowMapper{
+
+	@Override
+	public Contact mapRow(ResultSet rs, int i) throws SQLException {
+		
+		Contact c = new Contact();
+		c.setUserId(rs.getInt("userId"));
+		c.setName(rs.getString("name"));
+		c.setPhone(rs.getString("phone"));
+		c.setAddress(rs.getString("address"));
+		c.setEmail(rs.getString("email"));
+		c.setLoginName(rs.getString("loginName"));
+		c.setRole(rs.getInt("role"));
+		c.setLoginStatus(rs.getInt("loginStatus"));
+		
+		return u;
+	}
+
+	
+}

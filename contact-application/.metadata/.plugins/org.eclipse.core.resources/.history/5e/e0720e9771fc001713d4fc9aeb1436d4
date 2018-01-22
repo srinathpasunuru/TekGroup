@@ -1,0 +1,5 @@
+package com.srinath.ContactApp.command;
+
+public class LoginCommand {
+
+}

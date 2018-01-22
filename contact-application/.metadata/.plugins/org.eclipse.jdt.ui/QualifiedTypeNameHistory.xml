@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.BasicDataSource"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.support.GeneratedKeyHolder"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.Config.SpringRootConfiguration"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.rm.UserRowMapper"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.support.KeyHolder"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.SqlParameterSource"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.MapSqlParameterSource"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.rm.ContactRowMapper"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.Domain.User"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.Exception.UserBlockedException"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.Dao.BaseDao"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.Service.UserService"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.Domain.Contact"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.Dao.ContactDao"/>
+<fullyQualifiedTypeName name="com.srinath.ContactApp.utility.StringUtil"/>
+</qualifiedTypeNameHistroy>

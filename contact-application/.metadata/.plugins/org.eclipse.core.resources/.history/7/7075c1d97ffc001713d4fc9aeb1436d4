@@ -1,0 +1,13 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:if test="${session.userId == null}">
+	<!-- the user is not yet logged in -->
+	<a href = "#">Home</a> | <a href = "#">Login</a> | <a href = "#">Register</a> | <a href = "#">About</a>
+</c:if>
+<c:if test="${session.userId!== null && sessionScope.role = 1}">
+	<!-- the user is not yet logged in -->
+	<a href = "#">Home</a> | <a href = "#">User List</a> | <a href = "#">Logout</a>
+</c:if>
+<c:if test="${session.userId!== null && sessionScope.role == 2 }">
+	<!-- the user is not yet logged in -->
+	<a href = "#">Home</a> | <a href = "#">Add Contact</a> | <a href = "#">Contact List</a> | <a href = "#">Logout</a>
+</c:if>

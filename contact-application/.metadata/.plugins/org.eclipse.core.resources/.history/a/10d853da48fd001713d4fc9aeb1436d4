@@ -1,0 +1,17 @@
+package com.srinath.ContactApp.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.srinath.ContactApp.Domain.Contact;
+
+@Controller
+public class ContactController {
+	@RequestMapping(value = "/user/contact_form")
+	public String ContactForm(Model theModel) {
+		Contact contact = new Contact();
+		theModel.addAttribute("command", contact);
+		return "contact_form";
+	}
+}

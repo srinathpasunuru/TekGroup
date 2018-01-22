@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+C:\spring-practice\contact-application\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2017863364.index
+10268292.index
+3007255887.index
+4020984162.index
+1895595625.index
+1526427654.index
+1900193977.index
+2981476488.index
+2981476488.index

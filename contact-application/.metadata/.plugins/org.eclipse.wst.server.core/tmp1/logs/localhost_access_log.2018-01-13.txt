@@ -1,0 +1,15 @@
+127.0.0.1 - - [13/Jan/2018:10:44:48 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Jan/2018:10:44:49 -0500] "GET /SpringContactAppication/ HTTP/1.1" 404 1047
+127.0.0.1 - - [13/Jan/2018:10:46:48 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Jan/2018:10:46:48 -0500] "GET /SpringContactAppication/WEB-INF/classes/com/srinath/ContactApp/test/TestDataSource.java HTTP/1.1" 404 1047
+127.0.0.1 - - [13/Jan/2018:10:52:36 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Jan/2018:10:52:36 -0500] "GET /SpringContactAppication/WEB-INF/classes/com/srinath/ContactApp/test/TestDataSource.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [13/Jan/2018:10:53:38 -0500] "GET /SpringContactAppication/WEB-INF/classes/com/srinath/ContactApp/test/TestDataSource.java/jdbc:mysql://localhost:3306/contactappication_db HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [13/Jan/2018:10:54:49 -0500] "GET /SpringContactAppication/com/srinath/ContactApp/test/TestDataSource.java/ HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [13/Jan/2018:10:55:20 -0500] "GET /SpringContactAppication/java%20Resources/src/com/srinath/ContactApp/test/TestDataSource.java/ HTTP/1.1" 404 1047
+127.0.0.1 - - [13/Jan/2018:10:56:38 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Jan/2018:10:56:39 -0500] "GET /SpringContactAppication/WEB-INF/classes/com/srinath/ContactApp/test/TestDataSource.java HTTP/1.1" 404 1047
+127.0.0.1 - - [13/Jan/2018:11:01:16 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Jan/2018:11:01:17 -0500] "GET /SpringContactAppication/ HTTP/1.1" 404 1047
+127.0.0.1 - - [13/Jan/2018:11:16:10 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Jan/2018:11:16:11 -0500] "GET /SpringContactAppication/WEB-INF/classes/com/srinath/ContactApp/test/TestDataSource.java HTTP/1.1" 404 1047

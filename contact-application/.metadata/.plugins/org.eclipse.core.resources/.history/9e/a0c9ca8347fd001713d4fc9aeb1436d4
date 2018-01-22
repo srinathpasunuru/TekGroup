@@ -1,0 +1,16 @@
+package com.srinath.ContactApp.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+import com.srinath.ContactApp.Domain.Contact;
+
+@Controller
+public class ContactController {
+
+	public String ContactForm(Model theModel) {
+		Contact contact = new Contact();
+		theModel.addAttribute("command", contact);
+		return "contact_form";
+	}
+}
