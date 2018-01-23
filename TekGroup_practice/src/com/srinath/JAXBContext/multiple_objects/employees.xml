@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employees>
+    <employees>
+        <empid>123</empid>
+        <name>srinath</name>
+    </employees>
+    <employees>
+        <empid>124</empid>
+        <name>ramakanth</name>
+    </employees>
+    <employees>
+        <empid>125</empid>
+        <name>akhil</name>
+    </employees>
+    <employees>
+        <empid>126</empid>
+        <name>vineeth</name>
+    </employees>
+</employees>
